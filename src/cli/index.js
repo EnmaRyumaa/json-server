@@ -1,6 +1,7 @@
 const yargs = require('yargs')
 const run = require('./run')
 const pkg = require('../../package.json')
+require('dotenv').config()
 
 module.exports = function () {
   const argv = yargs
@@ -10,12 +11,12 @@ module.exports = function () {
       port: {
         alias: 'p',
         description: 'Set port',
-        default: 3000,
+        default: process.env.PORT || 3000,
       },
       host: {
         alias: 'H',
         description: 'Set host',
-        default: 'localhost',
+        default: '0.0.0.0',
       },
       watch: {
         alias: 'w',
