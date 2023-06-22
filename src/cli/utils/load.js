@@ -9,9 +9,15 @@ const is = require('./is')
 const chalk = require('chalk')
 
 const example = {
-  posts: [{ id: 1, title: 'json-server', author: 'typicode' }],
-  comments: [{ id: 1, body: 'some comment', postId: 1 }],
-  profile: { name: 'typicode' },
+  user: 
+  [
+    {
+      name:"admin", 
+      lastname: "admin", 
+      email: "admin@gmail.com", 
+      password: "password"
+    }
+  ]
 }
 
 module.exports = function (source) {
